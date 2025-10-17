@@ -4,17 +4,18 @@
   <meta charset="UTF-8">
   <title>Encriptador de texto</title>
   <link rel="stylesheet" href="index1.css">
+  <!-- Agrega la librería CryptoJS -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/crypto-js.min.js"></script>
 </head>
 <body>
   <div class="container">
     <h1>Encriptador de texto</h1>
-    <label for="texto">Introduce el texto:</label>
-    <input type="text" id="texto" style="width:100%;margin-bottom:12px;">
-    <button onclick="encriptarYInvertir()">Encriptar</button>
-    <button onclick="desencriptarYInvertir()" style="margin-left:8px;">Desencriptar</button>
-    <h3>Resultado:</h3>
-    <pre id="resultado"></pre>
+    <textarea id="texto" placeholder="Mensaje" rows="4"></textarea>
+    <input id="clave" type="password" placeholder="Clave secreta">
+    <div id="resultado" style="white-space: pre-wrap;"></div>
+    <button onclick="encriptar()">Cifrar</button>
+    <button onclick="desencriptar()">Descifrar</button>
   </div>
-    <script src="encriptador.js"></script>
+  <script src="encriptador.js"></script>
 </body>
 </html>
