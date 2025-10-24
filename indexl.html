@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Ejemplo de Cifrado Simétrico y Asimétrico</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<h1 class="titulo">Ejemplo de Cifrado Simétrico y Asimétrico</h1>
+
+<section>
+  <h2>Cifrado Simétrico (AES-GCM)</h2>
+  <label>Mensaje:</label>
+  <textarea id="msgSim" rows="3">Mensaje secreto con AES</textarea>
+  <label>Contraseña:</label>
+  <input type="text" id="passSim" value="12345">
+  <button onclick="encriptarAES()">Cifrar</button>
+  <button onclick="desencriptarAES()">Descifrar</button>
+
+  <h4>Resultado:</h4>
+  <pre id="outSim"></pre>
+</section>
+
+<section>
+  <h2> Cifrado Asimétrico (RSA-OAEP)</h2>
+  <label>Mensaje:</label>
+  <textarea id="msgRSA" rows="3">Mensaje secreto con RSA</textarea>
+  <button onclick="generarRSA()">Generar Claves</button>
+  <button onclick="encriptarRSA()">Cifrar</button>
+  <button onclick="desencriptarRSA()">Descifrar</button>
+
+  <h4>Claves y Resultado:</h4>
+  <pre id="outRSA"></pre>
+</section>
+
+<section>
+  <h2>Generador de Hash</h2>
+  <label>Texto a hashear:</label>
+  <input type="text" id="entradaTexto" placeholder="Escribe el texto aquí" value="miClaveSecreta123" style="width: 100%; padding: 8px; margin-bottom: 10px;">
+  
+  <div class="acciones" style="margin: 10px 0;">
+    <button onclick="generarYMostrarHash()">Generar Hash</button>
+    <button id="btnCopiarHash" style="background:#10b981; color: white;">Copiar hash</button>
+  </div>
+
+  <h4>Hash generado:</h4>
+  <pre id="salidaHash" style="background: #f0f0f0; padding: 10px; border-radius: 4px; word-break: break-all;">(aún no generado)</pre>
+</section>
+
+<script src="script.js"></script>
+</body>
+</html>
