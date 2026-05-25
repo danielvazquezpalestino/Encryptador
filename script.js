@@ -141,6 +141,4 @@ window.addEventListener('DOMContentLoaded', () => {
       }
     }
   });
-
-  // El hash ahora solo se genera al hacer clic en el botón "Generar Hash"
 });
